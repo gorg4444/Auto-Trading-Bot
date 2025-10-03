@@ -1,0 +1,10 @@
+PyQt6
+PyQt6-Charts
+alpaca-trade-api
+pandas
+pandas_ta
+python-dotenv
+pytz
+yfinance
+vaderSentiment
+requests

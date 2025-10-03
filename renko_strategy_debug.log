@@ -1,0 +1,348 @@
+2025-09-12 11:20:29,850 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): paper-api.alpaca.markets:443
+2025-09-12 11:20:30,261 - urllib3.connectionpool - DEBUG - https://paper-api.alpaca.markets:443 "GET /v2/account HTTP/1.1" 200 None
+2025-09-12 11:20:30,261 - root - INFO - Alpaca connection successful. Account status: ACTIVE
+2025-09-12 11:20:31,597 - yfinance - DEBUG - Using User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+2025-09-12 11:20:31,597 - yfinance - DEBUG - Entering history()
+2025-09-12 11:20:31,606 - peewee - DEBUG - ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-09-12 11:20:31,606 - peewee - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['SPY', 1, 0])
+2025-09-12 11:20:33,995 - yfinance - DEBUG -  Entering history()
+2025-09-12 11:20:33,995 - yfinance - DEBUG - SPY: Yahoo GET parameters: {'range': '1d', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-09-12 11:20:33,995 - yfinance - DEBUG -   Entering get()
+2025-09-12 11:20:33,995 - yfinance - DEBUG -    Entering _make_request()
+2025-09-12 11:20:33,995 - yfinance - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/SPY
+2025-09-12 11:20:33,995 - yfinance - DEBUG - params={'range': '1d', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-09-12 11:20:33,995 - yfinance - DEBUG -     Entering _get_cookie_and_crumb()
+2025-09-12 11:20:33,995 - yfinance - DEBUG - cookie_mode = 'basic'
+2025-09-12 11:20:33,995 - yfinance - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-09-12 11:20:34,325 - yfinance - DEBUG - crumb = '7HkngYunHcJ'
+2025-09-12 11:20:34,325 - yfinance - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-09-12 11:20:34,325 - yfinance - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-09-12 11:20:34,474 - yfinance - DEBUG - response code=200
+2025-09-12 11:20:34,474 - yfinance - DEBUG -    Exiting _make_request()
+2025-09-12 11:20:34,474 - yfinance - DEBUG -   Exiting get()
+2025-09-12 11:20:34,490 - yfinance - DEBUG - SPY: yfinance received OHLC data: 2025-09-11 13:30:00 -> 2025-09-11 20:00:00
+2025-09-12 11:20:34,556 - yfinance - DEBUG - SPY: OHLC after cleaning: 2025-09-11 09:30:00-04:00 -> 2025-09-11 15:59:00-04:00
+2025-09-12 11:20:34,572 - yfinance - DEBUG - SPY: OHLC after combining events: 2025-09-11 09:30:00-04:00 -> 2025-09-11 15:59:00-04:00
+2025-09-12 11:20:34,581 - yfinance - DEBUG - SPY: yfinance returning OHLC: 2025-09-11 09:30:00-04:00 -> 2025-09-11 15:59:00-04:00
+2025-09-12 11:20:34,581 - yfinance - DEBUG -  Exiting history()
+2025-09-12 11:20:34,589 - yfinance - DEBUG - Exiting history()
+2025-09-12 11:20:34,589 - root - INFO - Real-time price for SPY: 657.5900268554688
+2025-09-12 11:20:34,589 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): data.alpaca.markets:443
+2025-09-12 11:20:34,958 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:34,967 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:34,967 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.065759
+2025-09-12 11:20:34,967 - root - INFO - Initialized SPY with price: 657.5900268554688, brick size: 0.065759
+2025-09-12 11:20:34,967 - root - INFO - 
+--- Running Logic Backtest ---
+2025-09-12 11:20:34,967 - root - INFO - === Running backtest for SPY ===
+2025-09-12 11:20:35,090 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,090 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,099 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045000
+2025-09-12 11:20:35,099 - root - DEBUG - SPY: Price change 0.0000 below min threshold (0.009000)
+2025-09-12 11:20:35,099 - root - INFO - Simulated price 1: $450.00 -> Signal: hold
+2025-09-12 11:20:35,205 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,220 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,222 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044995
+2025-09-12 11:20:35,222 - root - DEBUG - SPY: Price change: -0.0500, Brick size: 0.044995, Bricks formed: 1
+2025-09-12 11:20:35,222 - root - INFO - SPY: 1 new red brick(s), price: $449.95, last brick: $449.96, size: $0.0450
+2025-09-12 11:20:35,224 - root - INFO - Simulated price 2: $449.95 -> Signal: hold
+2025-09-12 11:20:35,337 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,337 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,337 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044990
+2025-09-12 11:20:35,337 - root - DEBUG - SPY: Price change: -0.0550, Brick size: 0.044990, Bricks formed: 1
+2025-09-12 11:20:35,337 - root - INFO - SPY: 1 new red brick(s), price: $449.90, last brick: $449.91, size: $0.0450
+2025-09-12 11:20:35,337 - root - INFO - Simulated price 3: $449.90 -> Signal: hold
+2025-09-12 11:20:35,452 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,452 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,452 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044985
+2025-09-12 11:20:35,461 - root - DEBUG - SPY: Price change: -0.0600, Brick size: 0.044985, Bricks formed: 1
+2025-09-12 11:20:35,461 - root - INFO - SPY: 1 new red brick(s), price: $449.85, last brick: $449.87, size: $0.0450
+2025-09-12 11:20:35,461 - root - INFO - Simulated price 4: $449.85 -> Signal: hold
+2025-09-12 11:20:35,567 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,575 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,575 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044980
+2025-09-12 11:20:35,575 - root - DEBUG - SPY: Price change: -0.0650, Brick size: 0.044980, Bricks formed: 1
+2025-09-12 11:20:35,575 - root - INFO - SPY: 1 new red brick(s), price: $449.80, last brick: $449.82, size: $0.0450
+2025-09-12 11:20:35,575 - root - INFO - Simulated price 5: $449.80 -> Signal: hold
+2025-09-12 11:20:35,715 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,715 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,715 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044970
+2025-09-12 11:20:35,715 - root - DEBUG - SPY: Price change: -0.1201, Brick size: 0.044970, Bricks formed: 2
+2025-09-12 11:20:35,715 - root - INFO - SPY: 2 new red brick(s), price: $449.70, last brick: $449.73, size: $0.0450
+2025-09-12 11:20:35,715 - root - INFO - Simulated price 6: $449.70 -> Signal: hold
+2025-09-12 11:20:35,830 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,838 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,838 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044960
+2025-09-12 11:20:35,838 - root - DEBUG - SPY: Price change: -0.1301, Brick size: 0.044960, Bricks formed: 2
+2025-09-12 11:20:35,838 - root - INFO - SPY: 2 new red brick(s), price: $449.60, last brick: $449.64, size: $0.0450
+2025-09-12 11:20:35,841 - root - INFO - Simulated price 7: $449.60 -> Signal: hold
+2025-09-12 11:20:35,954 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:35,954 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:35,954 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044950
+2025-09-12 11:20:35,954 - root - DEBUG - SPY: Price change: -0.1402, Brick size: 0.044950, Bricks formed: 3
+2025-09-12 11:20:35,954 - root - INFO - SPY: 3 new red brick(s), price: $449.50, last brick: $449.51, size: $0.0450
+2025-09-12 11:20:35,954 - root - INFO - Simulated price 8: $449.50 -> Signal: hold
+2025-09-12 11:20:36,068 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,068 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,068 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044940
+2025-09-12 11:20:36,068 - root - DEBUG - SPY: Price change: -0.1053, Brick size: 0.044940, Bricks formed: 2
+2025-09-12 11:20:36,068 - root - INFO - SPY: 2 new red brick(s), price: $449.40, last brick: $449.42, size: $0.0449
+2025-09-12 11:20:36,068 - root - INFO - Simulated price 9: $449.40 -> Signal: hold
+2025-09-12 11:20:36,183 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,191 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,191 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044930
+2025-09-12 11:20:36,191 - root - DEBUG - SPY: Price change: -0.1155, Brick size: 0.044930, Bricks formed: 2
+2025-09-12 11:20:36,191 - root - INFO - SPY: 2 new red brick(s), price: $449.30, last brick: $449.33, size: $0.0449
+2025-09-12 11:20:36,191 - root - INFO - Simulated price 10: $449.30 -> Signal: hold
+2025-09-12 11:20:36,307 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,307 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,307 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044920
+2025-09-12 11:20:36,307 - root - DEBUG - SPY: Price change: -0.1256, Brick size: 0.044920, Bricks formed: 2
+2025-09-12 11:20:36,307 - root - INFO - SPY: 2 new red brick(s), price: $449.20, last brick: $449.24, size: $0.0449
+2025-09-12 11:20:36,307 - root - INFO - Simulated price 11: $449.20 -> Signal: hold
+2025-09-12 11:20:36,421 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,429 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,429 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044910
+2025-09-12 11:20:36,429 - root - DEBUG - SPY: Price change: -0.1358, Brick size: 0.044910, Bricks formed: 3
+2025-09-12 11:20:36,429 - root - INFO - SPY: 3 new red brick(s), price: $449.10, last brick: $449.10, size: $0.0449
+2025-09-12 11:20:36,429 - root - INFO - Simulated price 12: $449.10 -> Signal: hold
+2025-09-12 11:20:36,548 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,558 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,558 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044900
+2025-09-12 11:20:36,558 - root - DEBUG - SPY: Price change: -0.1010, Brick size: 0.044900, Bricks formed: 2
+2025-09-12 11:20:36,558 - root - INFO - SPY: 2 new red brick(s), price: $449.00, last brick: $449.01, size: $0.0449
+2025-09-12 11:20:36,558 - root - INFO - Simulated price 13: $449.00 -> Signal: hold
+2025-09-12 11:20:36,674 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,674 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,674 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044905
+2025-09-12 11:20:36,674 - root - DEBUG - SPY: Price change: 0.0388, Brick size: 0.044905, Bricks formed: 1
+2025-09-12 11:20:36,674 - root - INFO - SPY: 1 new green brick(s), price: $449.05, last brick: $449.06, size: $0.0449
+2025-09-12 11:20:36,674 - root - INFO - LONG signal for SPY: Two red bricks followed by green
+2025-09-12 11:20:36,682 - root - INFO - Simulated price 14: $449.05 -> Signal: buy
+2025-09-12 11:20:36,798 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,803 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,805 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044915
+2025-09-12 11:20:36,805 - root - DEBUG - SPY: Price change: 0.0939, Brick size: 0.044915, Bricks formed: 2
+2025-09-12 11:20:36,805 - root - INFO - SPY: 2 new green brick(s), price: $449.15, last brick: $449.15, size: $0.0449
+2025-09-12 11:20:36,805 - root - INFO - Simulated price 15: $449.15 -> Signal: hold
+2025-09-12 11:20:36,919 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:36,926 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:36,926 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044925
+2025-09-12 11:20:36,926 - root - DEBUG - SPY: Price change: 0.1040, Brick size: 0.044925, Bricks formed: 2
+2025-09-12 11:20:36,926 - root - INFO - SPY: 2 new green brick(s), price: $449.25, last brick: $449.24, size: $0.0449
+2025-09-12 11:20:36,926 - root - INFO - Simulated price 16: $449.25 -> Signal: hold
+2025-09-12 11:20:37,041 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,041 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,041 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044935
+2025-09-12 11:20:37,041 - root - DEBUG - SPY: Price change: 0.1142, Brick size: 0.044935, Bricks formed: 2
+2025-09-12 11:20:37,041 - root - INFO - SPY: 2 new green brick(s), price: $449.35, last brick: $449.33, size: $0.0449
+2025-09-12 11:20:37,041 - root - INFO - Simulated price 17: $449.35 -> Signal: hold
+2025-09-12 11:20:37,157 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,165 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,165 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044945
+2025-09-12 11:20:37,165 - root - DEBUG - SPY: Price change: 0.1243, Brick size: 0.044945, Bricks formed: 2
+2025-09-12 11:20:37,165 - root - INFO - SPY: 2 new green brick(s), price: $449.45, last brick: $449.42, size: $0.0449
+2025-09-12 11:20:37,165 - root - INFO - Simulated price 18: $449.45 -> Signal: hold
+2025-09-12 11:20:37,272 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,280 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,280 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044955
+2025-09-12 11:20:37,280 - root - DEBUG - SPY: Price change: 0.1344, Brick size: 0.044955, Bricks formed: 2
+2025-09-12 11:20:37,280 - root - INFO - SPY: 2 new green brick(s), price: $449.55, last brick: $449.51, size: $0.0450
+2025-09-12 11:20:37,280 - root - INFO - Simulated price 19: $449.55 -> Signal: hold
+2025-09-12 11:20:37,395 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,403 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,403 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044965
+2025-09-12 11:20:37,403 - root - DEBUG - SPY: Price change: 0.1445, Brick size: 0.044965, Bricks formed: 3
+2025-09-12 11:20:37,403 - root - INFO - SPY: 3 new green brick(s), price: $449.65, last brick: $449.64, size: $0.0450
+2025-09-12 11:20:37,403 - root - INFO - Simulated price 20: $449.65 -> Signal: hold
+2025-09-12 11:20:37,518 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,518 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,518 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044975
+2025-09-12 11:20:37,518 - root - DEBUG - SPY: Price change: 0.1096, Brick size: 0.044975, Bricks formed: 2
+2025-09-12 11:20:37,518 - root - INFO - SPY: 2 new green brick(s), price: $449.75, last brick: $449.73, size: $0.0450
+2025-09-12 11:20:37,518 - root - INFO - Simulated price 21: $449.75 -> Signal: hold
+2025-09-12 11:20:37,634 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,638 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,638 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044985
+2025-09-12 11:20:37,638 - root - DEBUG - SPY: Price change: 0.1197, Brick size: 0.044985, Bricks formed: 2
+2025-09-12 11:20:37,638 - root - INFO - SPY: 2 new green brick(s), price: $449.85, last brick: $449.82, size: $0.0450
+2025-09-12 11:20:37,638 - root - INFO - Simulated price 22: $449.85 -> Signal: hold
+2025-09-12 11:20:37,749 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,757 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,757 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044990
+2025-09-12 11:20:37,757 - root - DEBUG - SPY: Price change: 0.0797, Brick size: 0.044990, Bricks formed: 1
+2025-09-12 11:20:37,757 - root - INFO - SPY: 1 new green brick(s), price: $449.90, last brick: $449.87, size: $0.0450
+2025-09-12 11:20:37,757 - root - INFO - Simulated price 23: $449.90 -> Signal: hold
+2025-09-12 11:20:37,865 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:37,874 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:37,874 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.044995
+2025-09-12 11:20:37,874 - root - DEBUG - SPY: Price change: 0.0847, Brick size: 0.044995, Bricks formed: 1
+2025-09-12 11:20:37,874 - root - INFO - SPY: 1 new green brick(s), price: $449.95, last brick: $449.91, size: $0.0450
+2025-09-12 11:20:37,874 - root - INFO - Simulated price 24: $449.95 -> Signal: hold
+2025-09-12 11:20:37,998 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,006 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,006 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045000
+2025-09-12 11:20:38,006 - root - DEBUG - SPY: Price change: 0.0897, Brick size: 0.045000, Bricks formed: 1
+2025-09-12 11:20:38,006 - root - INFO - SPY: 1 new green brick(s), price: $450.00, last brick: $449.96, size: $0.0450
+2025-09-12 11:20:38,006 - root - INFO - Simulated price 25: $450.00 -> Signal: hold
+2025-09-12 11:20:38,006 - root - INFO - === Backtest Complete ===
+2025-09-12 11:20:38,006 - root - INFO - Generated Signals: ['hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'buy', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold']
+2025-09-12 11:20:38,006 - root - INFO - === Running backtest for SPY ===
+2025-09-12 11:20:38,120 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,125 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,125 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045000
+2025-09-12 11:20:38,125 - root - DEBUG - SPY: Price change 0.0000 below min threshold (0.009000)
+2025-09-12 11:20:38,125 - root - INFO - Simulated price 1: $450.00 -> Signal: hold
+2025-09-12 11:20:38,238 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,243 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,243 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045005
+2025-09-12 11:20:38,243 - root - DEBUG - SPY: Price change: 0.0500, Brick size: 0.045005, Bricks formed: 1
+2025-09-12 11:20:38,243 - root - INFO - SPY: 1 new green brick(s), price: $450.05, last brick: $450.05, size: $0.0450
+2025-09-12 11:20:38,243 - root - INFO - Simulated price 2: $450.05 -> Signal: hold
+2025-09-12 11:20:38,358 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,367 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,367 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045015
+2025-09-12 11:20:38,367 - root - DEBUG - SPY: Price change: 0.1050, Brick size: 0.045015, Bricks formed: 2
+2025-09-12 11:20:38,367 - root - INFO - SPY: 2 new green brick(s), price: $450.15, last brick: $450.14, size: $0.0450
+2025-09-12 11:20:38,367 - root - INFO - Simulated price 3: $450.15 -> Signal: hold
+2025-09-12 11:20:38,481 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,490 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,490 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045025
+2025-09-12 11:20:38,490 - root - DEBUG - SPY: Price change: 0.1150, Brick size: 0.045025, Bricks formed: 2
+2025-09-12 11:20:38,490 - root - INFO - SPY: 2 new green brick(s), price: $450.25, last brick: $450.23, size: $0.0450
+2025-09-12 11:20:38,490 - root - INFO - Simulated price 4: $450.25 -> Signal: hold
+2025-09-12 11:20:38,598 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,605 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,605 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045035
+2025-09-12 11:20:38,605 - root - DEBUG - SPY: Price change: 0.1249, Brick size: 0.045035, Bricks formed: 2
+2025-09-12 11:20:38,605 - root - INFO - SPY: 2 new green brick(s), price: $450.35, last brick: $450.32, size: $0.0450
+2025-09-12 11:20:38,605 - root - INFO - Simulated price 5: $450.35 -> Signal: hold
+2025-09-12 11:20:38,728 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,728 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,728 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045045
+2025-09-12 11:20:38,728 - root - DEBUG - SPY: Price change: 0.1348, Brick size: 0.045045, Bricks formed: 2
+2025-09-12 11:20:38,728 - root - INFO - SPY: 2 new green brick(s), price: $450.45, last brick: $450.41, size: $0.0450
+2025-09-12 11:20:38,728 - root - INFO - Simulated price 6: $450.45 -> Signal: hold
+2025-09-12 11:20:38,844 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,852 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,852 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045055
+2025-09-12 11:20:38,852 - root - DEBUG - SPY: Price change: 0.1448, Brick size: 0.045055, Bricks formed: 3
+2025-09-12 11:20:38,852 - root - INFO - SPY: 3 new green brick(s), price: $450.55, last brick: $450.54, size: $0.0451
+2025-09-12 11:20:38,852 - root - INFO - Simulated price 7: $450.55 -> Signal: hold
+2025-09-12 11:20:38,959 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:38,968 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:38,968 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045065
+2025-09-12 11:20:38,968 - root - DEBUG - SPY: Price change: 0.1096, Brick size: 0.045065, Bricks formed: 2
+2025-09-12 11:20:38,968 - root - INFO - SPY: 2 new green brick(s), price: $450.65, last brick: $450.63, size: $0.0451
+2025-09-12 11:20:38,968 - root - INFO - Simulated price 8: $450.65 -> Signal: hold
+2025-09-12 11:20:39,091 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,091 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,091 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045075
+2025-09-12 11:20:39,091 - root - DEBUG - SPY: Price change: 0.1195, Brick size: 0.045075, Bricks formed: 2
+2025-09-12 11:20:39,091 - root - INFO - SPY: 2 new green brick(s), price: $450.75, last brick: $450.72, size: $0.0451
+2025-09-12 11:20:39,091 - root - INFO - Simulated price 9: $450.75 -> Signal: hold
+2025-09-12 11:20:39,206 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,214 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,214 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045085
+2025-09-12 11:20:39,214 - root - DEBUG - SPY: Price change: 0.1293, Brick size: 0.045085, Bricks formed: 2
+2025-09-12 11:20:39,214 - root - INFO - SPY: 2 new green brick(s), price: $450.85, last brick: $450.81, size: $0.0451
+2025-09-12 11:20:39,214 - root - INFO - Simulated price 10: $450.85 -> Signal: hold
+2025-09-12 11:20:39,338 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,338 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,338 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045095
+2025-09-12 11:20:39,338 - root - DEBUG - SPY: Price change: 0.1391, Brick size: 0.045095, Bricks formed: 3
+2025-09-12 11:20:39,338 - root - INFO - SPY: 3 new green brick(s), price: $450.95, last brick: $450.95, size: $0.0451
+2025-09-12 11:20:39,338 - root - INFO - Simulated price 11: $450.95 -> Signal: hold
+2025-09-12 11:20:39,459 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,467 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,467 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045105
+2025-09-12 11:20:39,467 - root - DEBUG - SPY: Price change: 0.1039, Brick size: 0.045105, Bricks formed: 2
+2025-09-12 11:20:39,467 - root - INFO - SPY: 2 new green brick(s), price: $451.05, last brick: $451.04, size: $0.0451
+2025-09-12 11:20:39,467 - root - INFO - Simulated price 12: $451.05 -> Signal: hold
+2025-09-12 11:20:39,583 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,583 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,583 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045115
+2025-09-12 11:20:39,583 - root - DEBUG - SPY: Price change: 0.1136, Brick size: 0.045115, Bricks formed: 2
+2025-09-12 11:20:39,583 - root - INFO - SPY: 2 new green brick(s), price: $451.15, last brick: $451.13, size: $0.0451
+2025-09-12 11:20:39,583 - root - INFO - Simulated price 13: $451.15 -> Signal: hold
+2025-09-12 11:20:39,706 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,706 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,706 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045125
+2025-09-12 11:20:39,706 - root - DEBUG - SPY: Price change: 0.1234, Brick size: 0.045125, Bricks formed: 2
+2025-09-12 11:20:39,706 - root - INFO - SPY: 2 new green brick(s), price: $451.25, last brick: $451.22, size: $0.0451
+2025-09-12 11:20:39,706 - root - INFO - Simulated price 14: $451.25 -> Signal: hold
+2025-09-12 11:20:39,837 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,839 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,839 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045120
+2025-09-12 11:20:39,839 - root - DEBUG - SPY: No full bricks formed.
+2025-09-12 11:20:39,839 - root - INFO - Simulated price 15: $451.20 -> Signal: hold
+2025-09-12 11:20:39,951 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:39,951 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:39,951 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045110
+2025-09-12 11:20:39,951 - root - DEBUG - SPY: Price change: -0.1168, Brick size: 0.045110, Bricks formed: 2
+2025-09-12 11:20:39,951 - root - INFO - SPY: 2 new red brick(s), price: $451.10, last brick: $451.13, size: $0.0451
+2025-09-12 11:20:39,951 - root - INFO - Simulated price 16: $451.10 -> Signal: hold
+2025-09-12 11:20:40,067 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,075 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,075 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045100
+2025-09-12 11:20:40,075 - root - DEBUG - SPY: Price change: -0.1266, Brick size: 0.045100, Bricks formed: 2
+2025-09-12 11:20:40,075 - root - INFO - SPY: 2 new red brick(s), price: $451.00, last brick: $451.04, size: $0.0451
+2025-09-12 11:20:40,075 - root - INFO - Simulated price 17: $451.00 -> Signal: hold
+2025-09-12 11:20:40,190 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,190 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,190 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045090
+2025-09-12 11:20:40,190 - root - DEBUG - SPY: Price change: -0.1364, Brick size: 0.045090, Bricks formed: 3
+2025-09-12 11:20:40,190 - root - INFO - SPY: 3 new red brick(s), price: $450.90, last brick: $450.90, size: $0.0451
+2025-09-12 11:20:40,190 - root - INFO - Simulated price 18: $450.90 -> Signal: hold
+2025-09-12 11:20:40,304 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,312 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,312 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045080
+2025-09-12 11:20:40,312 - root - DEBUG - SPY: Price change: -0.1011, Brick size: 0.045080, Bricks formed: 2
+2025-09-12 11:20:40,312 - root - INFO - SPY: 2 new red brick(s), price: $450.80, last brick: $450.81, size: $0.0451
+2025-09-12 11:20:40,312 - root - INFO - Simulated price 19: $450.80 -> Signal: hold
+2025-09-12 11:20:40,428 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,428 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,428 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045070
+2025-09-12 11:20:40,428 - root - DEBUG - SPY: Price change: -0.1110, Brick size: 0.045070, Bricks formed: 2
+2025-09-12 11:20:40,428 - root - INFO - SPY: 2 new red brick(s), price: $450.70, last brick: $450.72, size: $0.0451
+2025-09-12 11:20:40,428 - root - INFO - Simulated price 20: $450.70 -> Signal: hold
+2025-09-12 11:20:40,543 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,551 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,551 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045060
+2025-09-12 11:20:40,551 - root - DEBUG - SPY: Price change: -0.1208, Brick size: 0.045060, Bricks formed: 2
+2025-09-12 11:20:40,551 - root - INFO - SPY: 2 new red brick(s), price: $450.60, last brick: $450.63, size: $0.0451
+2025-09-12 11:20:40,551 - root - INFO - Simulated price 21: $450.60 -> Signal: hold
+2025-09-12 11:20:40,667 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,667 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,667 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045050
+2025-09-12 11:20:40,675 - root - DEBUG - SPY: Price change: -0.1307, Brick size: 0.045050, Bricks formed: 2
+2025-09-12 11:20:40,675 - root - INFO - SPY: 2 new red brick(s), price: $450.50, last brick: $450.54, size: $0.0450
+2025-09-12 11:20:40,675 - root - INFO - Simulated price 22: $450.50 -> Signal: hold
+2025-09-12 11:20:40,790 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,790 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,790 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045040
+2025-09-12 11:20:40,790 - root - DEBUG - SPY: Price change: -0.1406, Brick size: 0.045040, Bricks formed: 3
+2025-09-12 11:20:40,790 - root - INFO - SPY: 3 new red brick(s), price: $450.40, last brick: $450.41, size: $0.0450
+2025-09-12 11:20:40,790 - root - INFO - Simulated price 23: $450.40 -> Signal: hold
+2025-09-12 11:20:40,921 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:40,921 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:40,921 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045035
+2025-09-12 11:20:40,921 - root - DEBUG - SPY: Price change: -0.0555, Brick size: 0.045035, Bricks formed: 1
+2025-09-12 11:20:40,921 - root - INFO - SPY: 1 new red brick(s), price: $450.35, last brick: $450.36, size: $0.0450
+2025-09-12 11:20:40,921 - root - INFO - Simulated price 24: $450.35 -> Signal: hold
+2025-09-12 11:20:41,060 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:41,060 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:41,060 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045030
+2025-09-12 11:20:41,060 - root - DEBUG - SPY: Price change: -0.0605, Brick size: 0.045030, Bricks formed: 1
+2025-09-12 11:20:41,060 - root - INFO - SPY: 1 new red brick(s), price: $450.30, last brick: $450.32, size: $0.0450
+2025-09-12 11:20:41,060 - root - INFO - Simulated price 25: $450.30 -> Signal: hold
+2025-09-12 11:20:41,174 - urllib3.connectionpool - DEBUG - https://data.alpaca.markets:443 "GET /v2/stocks/SPY/bars?timeframe=1Min&adjustment=raw&limit=28 HTTP/1.1" 200 None
+2025-09-12 11:20:41,174 - root - DEBUG - Minute ATR for SPY: 0.097143
+2025-09-12 11:20:41,174 - root - INFO - SPY: ATR=0.097143, Adaptive brick size=0.045025
+2025-09-12 11:20:41,174 - root - DEBUG - SPY: Price change: -0.0654, Brick size: 0.045025, Bricks formed: 1
+2025-09-12 11:20:41,174 - root - INFO - SPY: 1 new red brick(s), price: $450.25, last brick: $450.27, size: $0.0450
+2025-09-12 11:20:41,174 - root - INFO - Simulated price 26: $450.25 -> Signal: hold
+2025-09-12 11:20:41,183 - root - INFO - === Backtest Complete ===
+2025-09-12 11:20:41,183 - root - INFO - Generated Signals: ['hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold', 'hold']
+2025-09-12 11:20:41,183 - root - INFO - 
+--- Logic Backtest Complete ---
